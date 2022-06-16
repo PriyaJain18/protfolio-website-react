@@ -1,0 +1,112 @@
+.hoveringtabs{
+    color: aliceblue;
+    background-color: rgb(20, 26, 30);
+    padding: 9px 15px;
+    margin: 0.1px;
+    font-weight: 600;
+    border: 1px solid black;
+    border-radius: 2px;
+
+}
+.hoveringtabs:hover{
+    background-color: rgb(62, 83, 114) ;
+    color: rgb(141, 181, 231);
+    border-radius: 4px;
+
+}
+
+/* about */
+.lastAbout{
+    margin: 30px 10px;
+    padding: 10px;
+    width: 27%;
+    height: 10%;
+    text-transform: capitalize;
+    font-weight: 700;
+    text-align: center;
+    background-color: rgb(220, 67, 154);
+
+}
+/* blog */
+
+/* For blog.html */
+*{
+    margin:0;
+    padding: 0;
+    /* background-color: rgb(107, 47, 12); */
+}
+
+.wrapper{
+    display: flex;
+    flex-flow: row wrap;
+}
+.wrapper>*{
+    flex: 1 100%;     /* flex: flex-grow flex-shrink flex-basis */
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* header and insides:header -> nav ->ul ->li */ 
+header{
+    background-color: chocolate;
+    height: 90px;
+    display: none;
+}
+
+
+/* main and insides : main(.main) -> h1 + p */
+.main{
+    background-color: violet;
+    height: 300px;
+    text-align: left;
+    font-size: 20px;
+}
+/*both asides with classes .aside1 and .aside2 */
+.aside1{
+    background-color: aquamarine;
+}
+.aside2{
+    background-color: aquamarine;
+}
+/* footer :  */
+footer{
+    background-color: tomato;
+    height: 140px;
+
+}
+/* 800 to peak-level px */
+@media all and (min-width: 800px){
+
+    .main{
+        flex: 2 ;    /* in this case,accomodate .main, .aside1 and .aside2 on same line (USUALLY their widths)  */
+        order: 2;
+    }
+
+    /* NOTE : these flex properties i.e. putting them side-by-side wont work if you apply these in 'main' instead of class '.main' */
+
+    .aside1{
+        order: 1;   
+    
+    /*Note :if we dont write this then among .main , .aside , .aside2 -> jiska area bada hoga that will be the left-most*/
+
+    }
+    .aside2{
+        order: 2;
+    }
+    footer{
+        order: 3;
+
+    }
+
+}
+/* 600 to 800px */
+@media all and (min-width: 400px){
+    .aside1{
+        flex: 1;
+    }
+    .aside2{
+        flex: 1;
+    }
+}

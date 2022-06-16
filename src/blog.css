@@ -1,0 +1,16 @@
+.containerBlog{
+    background-color: violet;
+    color: black;
+    margin: 30px;
+    padding: 10px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.pBlog{
+    padding: 10px;
+    /* border: 2px solid black; */
+    margin: auto;
+
+
+}
